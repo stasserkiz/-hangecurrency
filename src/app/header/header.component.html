@@ -1,0 +1,26 @@
+<header>
+  <ul>
+    <li>Долар: {{ getCurrency?.[24]?.rate | json }}</li>
+    <li>Євро: {{ getCurrency?.[31]?.rate | json }}</li>
+  </ul>
+</header>
+
+<div class="container change">
+  <div class="firstTable">
+    <select type="number" [(ngModel)]="selectedOption1">
+      <option *ngFor="let item of basicCurrency" >{{item}}</option>
+    </select>
+    <p>Введіть суму: </p>
+    <input  [(ngModel)]="inputValue" >
+  </div>
+  <div class="firstTable">
+    <select type="number" [(ngModel)]="selectedOption2">
+      <option *ngFor="let item of basicCurrency" >{{item}}</option>
+    </select>
+    <p >Результат сума:</p>
+    <input [(ngModel)]="sum"  value = {{sum}}> 
+  </div>
+
+
+
+</div>
